@@ -1,0 +1,20 @@
+# Solidity
+pragma solidity ^0.6.0;
+contract Test{
+
+
+    struct People{
+        uint256 favouriteNumber;
+        string name;
+    }
+
+    
+
+    People[] public people;
+    
+
+    function addPerson(string memory _name ,uint256 _favoriteNumber) public{
+        people.push(People(_favoriteNumber,_name));
+       
+    }
+}
