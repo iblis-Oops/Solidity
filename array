@@ -9,7 +9,8 @@ contract Test{
     }
 
     
-
+    //defining the array means the <data type>[]scope <name of array>//
+    
     People[] public people;
     
 
