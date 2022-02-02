@@ -1,0 +1,29 @@
+//SPDX-License-Identifier:MIT;
+pragma solidity >=0.6.0<0.9;
+
+contract Test{
+    uint public storedData;
+    uint s;
+    function loop()  public{
+        for(uint i=0;i<10;i++){
+            storedData+=i;
+            if(i==3){
+                continue;
+            }
+
+            if (i==5){
+                break;
+            }
+        }
+
+        uint j;
+        while(j<10){
+            s+=j;
+            j++;
+        }
+    }
+
+    function get() view public returns(uint,uint){
+        return (storedData,s);
+    }
+}
