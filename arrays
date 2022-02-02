@@ -1,0 +1,37 @@
+//SPDX-License-Identifier:MIT;
+pragma solidity >=0.6.0<0.9.0;
+
+contract Test{
+    //initialization of array;
+
+    uint[] public arr;
+    uint[] public arr2=[1,2,3];
+
+    //Initialization of fixed sized array;All elements of fixed size array are initialized by 0;
+    uint[10] public myFixedArray;
+
+    function add(uint _x) public{
+        arr.push(_x);
+    }
+
+    function get(uint i) view public returns(uint){
+        return arr[i];
+    }
+
+    function getArr() view public returns(uint[] memory){
+        return arr;
+    }
+
+    function remove() public{
+        arr.pop();
+    }
+
+    function Length() view public returns(uint){
+        return arr.length;
+    }
+
+    function Delete(uint i) public{
+        delete arr[i];
+    }
+
+}
