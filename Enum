@@ -1,0 +1,31 @@
+//SPDX-License-Identifier:MIT;
+pragma solidity >=0.6.0<0.9.0;
+contract Test{
+    enum Status{
+        pending,
+        shipped,
+        accepted,
+        rejected,
+        cancelled
+    }
+    Status public status;
+
+    function get_status()view public returns(Status){
+        return status;
+    }
+
+    function set(Status i) public {
+        status = i;
+    }
+//This function will update the status to rejected;
+    function reject() public{
+        status = Status.rejected;
+    }
+
+// This function delete the value in status and specify it again it to 0;
+
+    function reset() public{
+        delete status;
+    }
+
+}
