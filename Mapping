@@ -1,0 +1,18 @@
+//SPDX-License-Identifier:MIT;
+pragma solidity >=0.6.0<0.9.0;
+
+contract Test{
+    mapping(address => uint)  myMap;
+
+    function set_address(address _addr , uint _x) public{
+        myMap[_addr] = _x;
+    }
+
+    function get(address _addr) view public returns(uint){
+        return myMap[_addr];
+    }
+
+    function remove(address _addr) public{
+        delete myMap[_addr];
+    }
+}
